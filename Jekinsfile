@@ -1,7 +1,10 @@
 pipeline{
   stages {
-    sptes (){
-      bat 'echo holamundo'
+    stage("hola"){
+    
+      sptes (){
+        bat 'echo holamundo'
+      }
     }
   }
 }
