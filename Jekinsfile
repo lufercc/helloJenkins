@@ -1,0 +1,7 @@
+pipeline{
+  stages {
+    sptes (){
+      bat 'echo holamundo'
+    }
+  }
+}
