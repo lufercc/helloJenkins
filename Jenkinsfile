@@ -1,8 +1,7 @@
 pipeline{
   stages {
     stage("hola"){
-    
-      sptes (){
+      steps{
         bat 'echo holamundo'
       }
     }
