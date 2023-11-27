@@ -1,9 +1,17 @@
 pipeline{
   agent any
+  triggers {
+    cron('H/05 * * * *')
+  }
   stages {
-    stage("hola"){
+    stage("Build"){
       steps{
-        bat 'echo holamundo'
+        bat 'gradle build'
+      }
+    }
+    stage("Test"){
+      steps{
+        bat 'gradle clean apiFeatures -Ptags="@Calculadora"'
       }
     }
   }
